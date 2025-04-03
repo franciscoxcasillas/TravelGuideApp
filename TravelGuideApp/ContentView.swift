@@ -9,15 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack{
+            LinearGradient(gradient: Gradient(colors: [.blue, .purple]), startPoint: .top, endPoint: .bottom)
+                .edgesIgnoringSafeArea(.all)
+            NavigationView {
+                VStack {
+                    Text("Welcome to Travel Guide App")
+                        .font(.custom("Montserrat-Bold", size: 20))
+                    Image(systemName: "airplane")
+                    NavigationLink("Profile", destination: ContentView())
+                }
+            }
+           
         }
-        .padding()
     }
 }
+
+
 
 #Preview {
     ContentView()
