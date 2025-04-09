@@ -87,7 +87,7 @@ struct DestinationViews: View {
                         }
                     }
                 }
-                .padding()
+                .padding(.horizontal)
             }
         }
 }
