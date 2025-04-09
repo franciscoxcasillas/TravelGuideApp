@@ -16,6 +16,11 @@
 			path = Screenshots;
 			sourceTree = "<group>";
 		};
+		EA129A102DA723D700F457B3 /* Media */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Media;
+			sourceTree = "<group>";
+		};
 		EA45B68C2D9F2E18006E3F2B /* TravelGuideApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = TravelGuideApp;
@@ -37,6 +42,7 @@
 		EA45B6812D9F2E18006E3F2B = {
 			isa = PBXGroup;
 			children = (
+				EA129A102DA723D700F457B3 /* Media */,
 				EA129A082DA722BC00F457B3 /* Screenshots */,
 				EA45B68C2D9F2E18006E3F2B /* TravelGuideApp */,
 				EA45B68B2D9F2E18006E3F2B /* Products */,
@@ -68,6 +74,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				EA129A082DA722BC00F457B3 /* Screenshots */,
+				EA129A102DA723D700F457B3 /* Media */,
 				EA45B68C2D9F2E18006E3F2B /* TravelGuideApp */,
 			);
 			name = TravelGuideApp;
