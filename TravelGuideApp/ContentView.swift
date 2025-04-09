@@ -12,6 +12,8 @@ struct Destination: Identifiable {
     let name: String
     let location: String
     let imageName: String
+    let highImage: String
+    let description: String
 }
 
 
@@ -54,12 +56,12 @@ struct ContentView: View {
 struct DestinationViews: View {
     
     let destinations = [
-        Destination(name: "Paris", location: "France", imageName: "paris"),
-        Destination(name: "Rome", location: "Italy", imageName: "roma"),
-        Destination(name: "Tokyo", location: "Japan", imageName: "tokyo"),
-        Destination(name: "New York", location: "USA", imageName: "newyork"),
-        Destination(name: "London", location: "UK", imageName: "london"),
-        Destination(name: "Sydney", location: "Australia", imageName: "sydney")
+        Destination(name: "Paris", location: "France", imageName: "paris", highImage: "france-high", description: "The City of Light enchants with romance, art, and elegance. Visit the Eiffel Tower, cafés, and world-class museums."),
+        Destination(name: "Rome", location: "Italy", imageName: "roma", highImage: "rome-high", description: "The Eternal City where history comes alive. Walk among ruins, fountains, and Renaissance masterpieces."),
+        Destination(name: "Tokyo", location: "Japan", imageName: "tokyo", highImage: "tokyo-high", description: "A vibrant blend of tradition and innovation. Explore ancient temples, neon-lit skyscrapers, and world-class cuisine."),
+        Destination(name: "New York", location: "USA", imageName: "newyork", highImage: "newyork-high", description: "The city that never sleeps. From Broadway lights to Central Park, experience energy and culture like nowhere else."),
+        Destination(name: "London", location: "UK", imageName: "london", highImage: "london-high", description: "A fusion of royal heritage and modern cool. Discover Big Ben, historic streets, and a rich arts scene."),
+        Destination(name: "Sydney", location: "Australia", imageName: "sydney",  highImage: "sydney-high", description: "A coastal gem known for its iconic Opera House, stunning beaches, and laid-back charm.")
     ]
     
     let columns = [
@@ -71,7 +73,9 @@ struct DestinationViews: View {
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(destinations) { destination in
-                        DestinationCardView(destination: destination)
+                        NavigationLink(destination: DetailedCardView(destination: destination)) {
+                            DestinationCardView(destination: destination)
+                        }
                     }
                 }
                 .padding()
@@ -107,7 +111,34 @@ struct DestinationCardView: View {
     }
 }
         
-
+struct DetailedCardView: View {
+    let destination: Destination
+    
+    var body: some View {
+        VStack {
+            Spacer()
+            Image(destination.imageName)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 230, height: 200)
+            Text("\(destination.name)")
+                .font(.title)
+            Text("\(destination.location)")
+                .font(.title3)
+                .foregroundColor(.gray)
+            Image(destination.highImage)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 350, height: 200)
+                .padding(30)
+            Text(destination.description)
+                .frame(width: 300)
+            Spacer()
+            Spacer()
+        }
+        
+    }
+}
 
 
 #Preview {
