@@ -10,22 +10,14 @@
 		EA45B68A2D9F2E18006E3F2B /* TravelGuideApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelGuideApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		EA45B6992D9F33BA006E3F2B /* Exceptions for "TravelGuideApp" folder in "TravelGuideApp" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = EA45B6892D9F2E18006E3F2B /* TravelGuideApp */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		EA129A082DA722BC00F457B3 /* Screenshots */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
 		EA45B68C2D9F2E18006E3F2B /* TravelGuideApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				EA45B6992D9F33BA006E3F2B /* Exceptions for "TravelGuideApp" folder in "TravelGuideApp" target */,
-			);
 			path = TravelGuideApp;
 			sourceTree = "<group>";
 		};
@@ -45,6 +37,7 @@
 		EA45B6812D9F2E18006E3F2B = {
 			isa = PBXGroup;
 			children = (
+				EA129A082DA722BC00F457B3 /* Screenshots */,
 				EA45B68C2D9F2E18006E3F2B /* TravelGuideApp */,
 				EA45B68B2D9F2E18006E3F2B /* Products */,
 			);
@@ -74,6 +67,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				EA129A082DA722BC00F457B3 /* Screenshots */,
 				EA45B68C2D9F2E18006E3F2B /* TravelGuideApp */,
 			);
 			name = TravelGuideApp;
