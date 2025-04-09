@@ -21,27 +21,36 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                LinearGradient(gradient: Gradient(colors: [.blue, .purple]),
+                LinearGradient(gradient: Gradient(colors: [.blue, .white]),
                                startPoint: .top,
                                endPoint: .bottom)
+                    .opacity(0.7)
                     .edgesIgnoringSafeArea(.all)
                 
                 VStack {
                     Spacer()
-                    Text("Welcome to Travel Guide App")
-                        .font(.custom("Montserrat-Bold", size: 20))
+                    Text("Welcome to")
+                        .font(.title)
+                        .bold()
                         .foregroundColor(.white)
+                        .shadow(color: .black, radius: 5)
+                    Text("Travel Guide App")
+                        .font(.largeTitle)
+                        .bold()
+                        .foregroundColor(.white)
+                        .shadow(color: .black, radius: 5)
                     Image("plane2")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 230)
                     Spacer().frame(height: 30)
                     NavigationLink(destination: DestinationViews()) {
-                            Label("Destinations", systemImage: "airplane")
+                            Label("See our destinations", systemImage: "airplane")
                             .foregroundColor(.white)
                             .padding()
                             .background(Color.green)
                             .cornerRadius(10)
+                            .shadow(color: .black.opacity(0.5), radius: 4)
                         
                         }
                     Spacer()
